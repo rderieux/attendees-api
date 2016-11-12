@@ -4,8 +4,10 @@ import Validator from 'express-joi-validator';
 
 
 const AttendeeModel = Joi.object().keys({
-    role: Joi.string().min(3).trim().label('Role'),
-    salary: Joi.number().min().trim().label('Salary'),
+    // role: Joi.string().trim().label('Role'),
+    // salary: Joi.number().trim().label('Salary'),
+    role: Joi.string(),
+    salary: Joi.number()
 });
 
 const router = new Router();
@@ -18,6 +20,7 @@ router.route('/')
 
         return services.attendees.all(index, pageSize)
             .then(attendees => {
+                console.log(attendees)
                 return res.json(attendees);
             })
             .catch(err => {

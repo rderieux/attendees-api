@@ -65,7 +65,7 @@ export default {
      */
     async update(id, fields = {}) {
         const old = await this.findById(id);
-        const restaurant = Object.assign({}, old, fields);
+        const attendee = Object.assign({}, old, fields);
 
         if (attendee._id) {
             delete attendee._id;
