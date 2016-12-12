@@ -4,7 +4,7 @@ import Boom from 'boom';
 const attendees = DB.get('attendees');
 
 /**
- * Restaurants Service
+ * Attendees Service
  *
  * @public
  */
@@ -25,7 +25,7 @@ export default {
     },
 
     /**
-     * Only the favorites
+     * Find one attendee by id
      *
      * @public
      *
