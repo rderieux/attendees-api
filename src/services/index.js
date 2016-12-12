@@ -5,7 +5,7 @@ import attendees from './attendees';
  *
  * @public
  *
- * @property restaurants
+ * @property attendees
  */
 export default {
     attendees
