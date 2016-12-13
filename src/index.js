@@ -27,7 +27,7 @@ app.use((err, req, res, next) => {
 
 
 if (ENV !== 'testing') {
-    app.listen(PORT, () => console.log(`Application started at: http://localhost:${PORT}`));
+    app.listen(PORT, () => console.log(`Application started at: http://localhost:${PORT}/attendees`));
 }
 
 

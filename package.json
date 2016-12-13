@@ -4,7 +4,9 @@
   "description": "Mongo DB for a meeting attendees array so I can have the full MEAN stack on my fiinall project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prestart": "mongod",
+    "start": "node ./bin/www",
+    "poststop": "mongo admin --eval 'db.shutdownServer()'"
   },
   "repository": {
     "type": "git",
